@@ -24,6 +24,12 @@
     "unused-imports/no-unused-imports": 2,
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
+    // "react/jsx-one-expression-per-line": [
+    //   "error",
+    //   {
+    //     "allow": "single-child"
+    //   }
+    // ],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "import-helpers/order-imports": [
