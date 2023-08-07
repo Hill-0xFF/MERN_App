@@ -13,11 +13,41 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "eslint-plugin-import-helpers",
+    "unused-imports"
+  ],
   "rules": {
+    "unused-imports/no-unused-imports": 2,
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "/^/vite/",
+          "/^@mui/",
+          "/^formik/",
+          "/^yup/",
+          "/^@/pages/",
+          "/^@/components/",
+          "/^@/enums/",
+          "/^@/hooks/",
+          "/^@/interfaces/",
+          "/^@/schemas/",
+          "/^@/styles/",
+          "/^@/utils/",
+          ["module"],
+          ["/^~//"],
+          ["parent", "sibling", "index"]
+        ]
+      }
+    ]
   }
 }
