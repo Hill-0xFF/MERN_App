@@ -7,3 +7,5 @@ export type UpdateTodoType = {
 };
 
 export type NovaTodoType = Omit<UpdateTodoType, 'id'>;
+
+export type TodoType = UpdateTodoType;
