@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
@@ -8,6 +9,9 @@ import Header from '@/components/Header';
 
 import reactLogo from '@/assets/react.svg';
 
+import { Dispatch } from './@types/dispatch.type';
+import { ReducerType } from './@types/todo.type';
+import { addNewTodo, getTodos } from './redux/actions/todo.actions';
 import { createNewTodo } from './requests';
 
 import viteLogo from '/vite.svg';
@@ -16,6 +20,21 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+  const dispatch: Dispatch = useDispatch();
+  const {
+    todoReducer: { isFetching },
+  } = useSelector((state: ReducerType) => state);
+
+  useEffect(() => {
+    dispatch(
+      addNewTodo({
+        title: 'useEffect Todo',
+        description: 'During initialization, useEffect sends an initial data.',
+        status: 'pending',
+        date: new Date().toISOString(),
+      })
+    );
+  }, []);
 
   const handleButtonSend = async () => {
     const resp = await createNewTodo({
@@ -25,12 +44,14 @@ function App() {
       date: new Date().toISOString(),
     });
 
+    dispatch(getTodos());
     console.log(resp);
   };
 
   return (
     <>
       <div>
+        <>{isFetching}</>
         <Header />
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
