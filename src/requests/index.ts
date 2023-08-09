@@ -12,7 +12,7 @@ const getTodosFromLocalStorage = (): TodoType[] => {
 
 const saveTodosToLocalStorage = (todo: NovaTodoType): UpdateTodoType => {
   const todos = getTodosFromLocalStorage();
-  const newTodoId = todos[todos.length - 1]?.id + 1 ?? 1;
+  const newTodoId = todos.length ? todos[todos.length - 1]?.id + 1 : 1;
   const newTodo = { ...todo, id: newTodoId };
   // todos.push(newTodo);
   const updatedTodos = [...todos, newTodo];

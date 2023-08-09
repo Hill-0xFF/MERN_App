@@ -2,7 +2,7 @@ export type UpdateTodoType = {
   id: number;
   title: string;
   description: string;
-  status: boolean;
+  status: 'done' | 'pending';
   date: string;
 };
 

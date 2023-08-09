@@ -6,7 +6,9 @@ import { DatePicker } from '@mui/x-date-pickers';
 
 import Header from '@/components/Header';
 
-import reactLogo from './assets/react.svg';
+import reactLogo from '@/assets/react.svg';
+
+import { createNewTodo } from './requests';
 
 import viteLogo from '/vite.svg';
 
@@ -14,6 +16,17 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+
+  const handleButtonSend = async () => {
+    const resp = await createNewTodo({
+      title: 'A New Way',
+      description: 'A new way to change your hair',
+      status: 'pending',
+      date: new Date().toISOString(),
+    });
+
+    console.log(resp);
+  };
 
   return (
     <>
@@ -35,7 +48,11 @@ function App() {
         >
           count is {count}
         </Button>
-        <Button variant="contained" endIcon={<SendIcon />}>
+        <Button
+          onClick={handleButtonSend}
+          variant="contained"
+          endIcon={<SendIcon />}
+        >
           Send
         </Button>
         <p>

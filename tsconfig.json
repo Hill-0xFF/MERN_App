@@ -17,16 +17,18 @@
     "baseUrl": ".",
 
     "paths": {
-      "@/components*": ["./src/components*"],
-      "@/enums*": ["./src/enums*"],
-      "@/hooks*": ["./src/hooks*"],
       "@/interfaces*": ["./src/interfaces*"],
+      "@/enums*": ["./src/enums*"],
+      "@/types": ["./src/types*"],
+      "@/components*": ["./src/components*"],
+      "@/hooks*": ["./src/hooks*"],
+      "@/requests*": ["./src/requests*"],
       "@/pages*": ["./src/pages*"],
       "@/schemas*": ["./src/schemas*"],
-      "@/styles*": ["./src/styles*"],
       "@/utils*": ["./src/utils*"],
-      "@/requests": ["./src/requests*"],
-      "@/types": ["./src/types*"]
+      "@/styles*": ["./src/styles*"],
+      "@/mui*": ["./src/mui*"],
+      "@/assets": ["./src/assets"]
     },
 
     /* Linting */
