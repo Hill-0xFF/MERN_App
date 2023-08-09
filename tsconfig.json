@@ -24,7 +24,9 @@
       "@/pages*": ["./src/pages*"],
       "@/schemas*": ["./src/schemas*"],
       "@/styles*": ["./src/styles*"],
-      "@/utils*": ["./src/utils*"]
+      "@/utils*": ["./src/utils*"],
+      "@/requests": ["./src/requests*"],
+      "@/types": ["./src/types*"]
     },
 
     /* Linting */

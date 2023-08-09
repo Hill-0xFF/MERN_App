@@ -15,6 +15,8 @@ export default defineConfig({
       '@/schemas': path.resolve(__dirname, '/src/schemas'),
       '@/styles': path.resolve(__dirname, '/src/styles'),
       '@/utils': path.resolve(__dirname, '/src/utils'),
+      '@/requests': path.resolve(__dirname, '/src/requests'),
+      '@/types': path.resolve(__dirname, '/src/types'),
     },
   },
 });
