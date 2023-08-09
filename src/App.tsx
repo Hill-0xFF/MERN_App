@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
 
 import Header from '@/components/Header';
@@ -32,6 +33,9 @@ function App() {
           onClick={() => setCount((count) => count + 1)}
         >
           count is {count}
+        </Button>
+        <Button variant="contained" endIcon={<SendIcon />}>
+          Send
         </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
