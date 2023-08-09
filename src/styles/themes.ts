@@ -32,6 +32,11 @@ const theme = createTheme({
       main: '#2e7d32',
       dark: '#1b5e20',
     },
+    customColor: {
+      light: '#e0f7fa',
+      main: '#b2ebf2',
+      dark: '#80deea',
+    },
   },
 });
 
