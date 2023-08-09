@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
+import { DatePicker } from '@mui/x-date-pickers';
 
 import Header from '@/components/Header';
 
@@ -44,6 +45,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <DatePicker label="Select an appropriate date" />
     </>
   );
 }

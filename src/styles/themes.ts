@@ -40,6 +40,9 @@ const theme = createTheme(
         main: '#b2ebf2',
         dark: '#80deea',
       },
+      background: {
+        default: 'whitesmoke',
+      },
     },
   },
   dataGridPtBR,
