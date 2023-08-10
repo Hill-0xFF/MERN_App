@@ -25,6 +25,18 @@ export const todoReducer = (state = initialState, _action: AnyAction) => {
         todos: _action.payload,
       };
 
+    case ActionsTypeEnum.UPDATE_TODO:
+      return {
+        ...state,
+        todos: _action.payload,
+      };
+
+    case ActionsTypeEnum.DELETE_TODO:
+      return {
+        ...state,
+        todos: _action.payload,
+      };
+
     default:
       return state;
   }
