@@ -6,5 +6,7 @@ export enum TodoEnums {
 export enum ActionsTypeEnum {
   GET_TODOS = 'getTodos',
   ADD_TODO = 'addTodo',
+  UPDATE_TODO = 'updateTodo',
+  DELETE_TODO = 'deleteTodo',
   TEST = 'test',
 }
