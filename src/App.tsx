@@ -7,14 +7,10 @@ import { DatePicker } from '@mui/x-date-pickers';
 
 import Header from '@/components/Header';
 
-import reactLogo from '@/assets/react.svg';
-
 import { Dispatch } from './@types/dispatch.type';
 import { ReducerType } from './@types/todo.type';
 import { addNewTodo, getTodos } from './redux/actions/todo.actions';
 import { createNewTodo } from './requests';
-
-import viteLogo from '/vite.svg';
 
 import './App.css';
 
@@ -53,14 +49,7 @@ function App() {
       <div>
         <>{isFetching}</>
         <Header />
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
       </div>
-      <h1>Vite + React</h1>
       <div className="card">
         <Button
           variant="contained"
@@ -76,13 +65,7 @@ function App() {
         >
           Send
         </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
       <DatePicker label="Select an appropriate date" />
     </>
   );
